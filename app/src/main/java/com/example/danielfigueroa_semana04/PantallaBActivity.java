@@ -48,14 +48,14 @@ public class PantallaBActivity extends AppCompatActivity {
                         if(conectado == true){
                             runOnUiThread(
                                     ()-> {
-                                        ConexionesB.setText(ConexionesB.getText().toString()+"Conectado\n"+bloques);
+                                        ConexionesB.setText(ConexionesB.getText().toString()+"Conectado\n"+bloques+"\n");
                                     }
                             );
 
                         }else{
                             runOnUiThread(
                                     ()-> {
-                                        ConexionesB.setText(ConexionesB.getText().toString() + "Perdida\n"+bloques);
+                                        ConexionesB.setText(ConexionesB.getText().toString() + "Perdida\n"+bloques+"\n");
                                     }
                             );
                         }

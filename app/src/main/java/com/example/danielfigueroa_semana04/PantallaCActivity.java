@@ -41,14 +41,14 @@ public class PantallaCActivity extends AppCompatActivity {
                         if (conectado == true) {
                             runOnUiThread(
                                     () -> {
-                                        ConexionesC.setText(ConexionesC.getText().toString() + "Conectado\n" + hosts + "\n");
+                                        ConexionesC.setText(ConexionesC.getText().getClass() + "Conectado\n" + hosts + "\n");
                                     }
                             );
 
                         } else {
                             runOnUiThread(
                                     () -> {
-                                        ConexionesC.setText(ConexionesC.getText().toString() + "Perdida\n" + hosts + "\n");
+                                        ConexionesC.setText(ConexionesC.getText().getClass() + "Perdida\n" + hosts + "\n");
                                     }
                             );
                         }

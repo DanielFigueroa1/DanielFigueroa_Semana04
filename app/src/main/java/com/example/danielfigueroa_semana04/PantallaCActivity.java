@@ -16,6 +16,8 @@ public class PantallaCActivity extends AppCompatActivity {
     private TextView ConexionesC;
     private Button RegresarC;
     private InetAddress hosts;
+    private int contador;
+    private String direccion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +28,16 @@ public class PantallaCActivity extends AppCompatActivity {
         RegresarC = findViewById(R.id.RegresarC);
 
 
-
         new Thread ( //
                 ()->{
 
                     try {
 
                         for (int i =1; i <255;i++){
-                        hosts = InetAddress.getByName("192.168.0.");
+
+                            contador +=1; //hace que contador suba
+                            direccion = String.valueOf(contador); //convierte contador de int a un string
+                        hosts = InetAddress.getByName("192.168.10."+direccion); //me habia faltado poner la variable que se suma en este caso contador
 
 
                         boolean conectado = hosts.isReachable(2000);
